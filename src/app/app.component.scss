@@ -1,0 +1,67 @@
+.container {
+  width: 100%;
+  margin: 20px;
+  .search {
+    position: relative;
+    .inputBox {
+      width: 90%;
+      height: 35px;
+    }
+    .searchButton {
+      width: 41px;
+      height: 41px;
+    }
+    .crossicon {
+      position: absolute;
+      right: 10%;
+      top: 20%;
+    }
+  }
+  .content {
+    .image {
+      height: 200px;
+      width: 200px;
+    }
+    .title {
+      text-align: left;
+      height: 75px;
+    }
+  }
+  #btnContainer {
+    margin-left: 75%;
+    margin-top: 15px;
+    .margin {
+      margin: 5px;
+    }
+  }
+}
+.large {
+  width: 20%;
+  margin: 20px;
+  height: 100%;
+  float: left;
+}
+
+.small {
+  width: 100%;
+  margin: 20px;
+  height: 100%;
+  float: left;
+}
+.visible {
+  display: none;
+}
+.invisible {
+  display: none;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  .large {
+    width: 25%;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 766px) {
+  .large {
+    width: 40%;
+  }
+}
