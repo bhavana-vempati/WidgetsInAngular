@@ -8,15 +8,24 @@
         placeholder="Search by title.."
         name="search"
       />
-      <img
-        *ngIf="queryString.length > 0"
+      <!-- <img
+       
         src="\assets\crossicon.png"
-        class="crossicon"
+       
         alt="cross"
         width="25"
         height="25"
+       
+      /> -->
+      <button
         (click)="close()"
-      />
+        *ngIf="queryString.length > 0"
+        type="button"
+        class="close crossicon"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
       <button class="searchButton" type="submit">
         <i class="fa fa-search"></i>
       </button>
