@@ -1,11 +1,13 @@
 .container {
   width: 100%;
-  margin: 20px;
+  margin-top: 20px;
+  background-color: #f1f1f1;
   .search {
     position: relative;
     .inputBox {
       width: 90%;
-      height: 35px;
+      height: 40px;
+      padding-left: 5px;
     }
     .searchButton {
       width: 41px;
@@ -14,39 +16,69 @@
     .crossicon {
       position: absolute;
       right: 10%;
-      top: 20%;
+      top: 12%;
+      font-size: 30px;
     }
   }
   .content {
     .image {
       height: 200px;
-      width: 200px;
+      width: 100%;
+      margin-bottom: 20px;
+      background-color: white;
     }
     .title {
-      text-align: left;
+      //text-align: left;
       height: 75px;
+      background-color: white;
+      margin-bottom: 10px;
+      padding: 5px;
+    }
+    .titleb {
+      padding: 5px;
+      background-color: white;
     }
   }
   #btnContainer {
-    margin-left: 75%;
-    margin-top: 15px;
+    margin-left: 82%;
+    //margin-top: 15px;
     .margin {
       margin: 5px;
     }
   }
 }
 .large {
-  width: 20%;
+  width: 21%;
   margin: 20px;
   height: 100%;
   float: left;
+  background-color: #f1f1f1;
+  text-align: center;
 }
 
 .small {
-  width: 100%;
+  width: 70%;
   margin: 20px;
   height: 100%;
   float: left;
+  .contentDiv {
+    float: right;
+    width: 75%;
+    .title {
+      background-color: white;
+      margin-bottom: 10px;
+      height: 20px;
+    }
+    .titleb {
+      background-color: white;
+      margin-bottom: 10px;
+      height: 20px;
+      width: 30% !important;
+    }
+  }
+  .image {
+    width: 20% !important;
+  }
 }
 .visible {
   display: none;
@@ -56,12 +88,49 @@
 }
 
 @media only screen and (min-width: 767px) and (max-width: 1024px) {
+  #btnContainer {
+    margin-left: 75% !important;
+  }
   .large {
     width: 25%;
   }
+  .small {
+    .contentDiv {
+      float: left;
+      width: 100%;
+    }
+
+    .image {
+      width: 200px !important;
+    }
+  }
 }
 @media only screen and (min-width: 400px) and (max-width: 766px) {
+  #btnContainer {
+    margin-left: 65% !important;
+  }
   .large {
     width: 40%;
+  }
+  .small {
+    .contentDiv {
+      float: left;
+      width: 80%;
+      .title {
+        background-color: white;
+        margin-bottom: 10px;
+        height: 40px;
+        // white-space: nowrap;
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+      }
+      .titleb {
+        width: 100% !important;
+        height: 20px;
+      }
+    }
+    .image {
+      width: 200px !important;
+    }
   }
 }

@@ -8,15 +8,7 @@
         placeholder="Search by title.."
         name="search"
       />
-      <!-- <img
-       
-        src="\assets\crossicon.png"
-       
-        alt="cross"
-        width="25"
-        height="25"
-       
-      /> -->
+
       <button
         (click)="close()"
         *ngIf="queryString.length > 0"
@@ -33,16 +25,25 @@
   </div>
   <div id="btnContainer">
     <button class="btn margin" (click)="listView()">
-      <i class="fa fa-bars"></i> List
+      <i class="glyphicon glyphicon-th-list"></i>
     </button>
-    <button class="btn active margin" (click)="gridView()">
-      <i class="fa fa-th-large"></i> Grid
+    <button class="btn margin" (click)="gridView()">
+      <i class="glyphicon glyphicon-th"></i>
     </button>
-    <button [class.visible]="visible" (click)="sortByLowtoHigh(publishedAt)">
-      sort by low<i class="fa fa-sort margin"></i>
+
+    <button
+      class="btn margin"
+      [class.visible]="visible"
+      (click)="sortByLowtoHigh(publishedAt)"
+    >
+      <i class="glyphicon glyphicon-sort-by-attributes-alt"></i>
     </button>
-    <button [class.invisible]="invisible" (click)="sortByHigtoLow(publishedAt)">
-      sort by high <i class="fa fa-sort margin"></i>
+    <button
+      class="btn margin"
+      [class.invisible]="invisible"
+      (click)="sortByHigtoLow(publishedAt)"
+    >
+      <i class="glyphicon glyphicon-sort-by-attributes-alt"></i>
     </button>
   </div>
   <div
@@ -52,7 +53,9 @@
     [class.small]="!large"
   >
     <img class="image" src="{{ data.urlToImage }}" />
-    <div class="title">{{ data.title }}</div>
-    <div class="title">{{ data.publishedAt | date: "medium" }}</div>
+    <div class="contentDiv">
+      <div class="title">{{ data.title }}</div>
+      <div class="titleb">{{ data.publishedAt | date: "medium" }}</div>
+    </div>
   </div>
 </div>
